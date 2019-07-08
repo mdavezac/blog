@@ -1,0 +1,8 @@
+[deps]
+BlockArrays = "8e7c35d0-a365-5155-bbbb-fb81a777f24e"
+BlockBandedMatrices = "ffab5731-97b5-5995-9138-79e8c1846df0"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Distributed = "8ba89e20-285c-5b6f-9357-94700520ee1b"
+IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
+SharedArrays = "1a1011a3-84de-559e-8e89-a11a2f7dc383"
+VegaLite = "112f6efa-9a02-5b7d-90c0-432ed331239a"
