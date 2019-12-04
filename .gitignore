@@ -1,2 +1,5 @@
-latency/Latency.md
-latency/Manifest.toml
+*
+!.gitignore
+!shared-memory-parallelization.ipynb
+
+
