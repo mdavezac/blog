@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<HTML lang="en">
+
+<HEAD>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+  </script>
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+
+  <style>
+    pre.hljl {
+      border: 1px solid #ccc;
+      margin: 5px;
+      padding: 5px;
+      overflow-x: auto;
+      color: rgb(68, 68, 68);
+      background-color: rgb(251, 251, 251);
+    }
+
+    pre.hljl>span.hljl-t {}
+
+    pre.hljl>span.hljl-w {}
+
+    pre.hljl>span.hljl-e {}
+
+    pre.hljl>span.hljl-eB {}
+
+    pre.hljl>span.hljl-o {}
+
+    pre.hljl>span.hljl-k {
+      color: rgb(148, 91, 176);
+      font-weight: bold;
+    }
+
+    pre.hljl>span.hljl-kc {
+      color: rgb(59, 151, 46);
+      font-style: italic;
+    }
+
+    pre.hljl>span.hljl-kd {
+      color: rgb(214, 102, 97);
+      font-style: italic;
+    }
+
+    pre.hljl>span.hljl-kn {
+      color: rgb(148, 91, 176);
+      font-weight: bold;
+    }
+
+    pre.hljl>span.hljl-kp {
+      color: rgb(148, 91, 176);
+      font-weight: bold;
+    }
+
+    pre.hljl>span.hljl-kr {
+      color: rgb(148, 91, 176);
+      font-weight: bold;
+    }
+
+    pre.hljl>span.hljl-kt {
+      color: rgb(148, 91, 176);
+      font-weight: bold;
+    }
+
+    pre.hljl>span.hljl-n {}
+
+    pre.hljl>span.hljl-na {}
+
+    pre.hljl>span.hljl-nb {}
+
+    pre.hljl>span.hljl-nbp {}
+
+    pre.hljl>span.hljl-nc {}
+
+    pre.hljl>span.hljl-ncB {}
+
+    pre.hljl>span.hljl-nd {
+      color: rgb(214, 102, 97);
+    }
+
+    pre.hljl>span.hljl-ne {}
+
+    pre.hljl>span.hljl-neB {}
+
+    pre.hljl>span.hljl-nf {
+      color: rgb(66, 102, 213);
+    }
+
+    pre.hljl>span.hljl-nfm {
+      color: rgb(66, 102, 213);
+    }
+
+    pre.hljl>span.hljl-np {}
+
+    pre.hljl>span.hljl-nl {}
+
+    pre.hljl>span.hljl-nn {}
+
+    pre.hljl>span.hljl-no {}
+
+    pre.hljl>span.hljl-nt {}
+
+    pre.hljl>span.hljl-nv {}
+
+    pre.hljl>span.hljl-nvc {}
+
+    pre.hljl>span.hljl-nvg {}
+
+    pre.hljl>span.hljl-nvi {}
+
+    pre.hljl>span.hljl-nvm {}
+
+    pre.hljl>span.hljl-l {}
+
+    pre.hljl>span.hljl-ld {
+      color: rgb(148, 91, 176);
+      font-style: italic;
+    }
+
+    pre.hljl>span.hljl-s {
+      color: rgb(201, 61, 57);
+    }
+
+    pre.hljl>span.hljl-sa {
+      color: rgb(201, 61, 57);
+    }
+
+    pre.hljl>span.hljl-sb {
+      color: rgb(201, 61, 57);
+    }
+
+    pre.hljl>span.hljl-sc {
+      color: rgb(201, 61, 57);
+    }
+
+    pre.hljl>span.hljl-sd {
+      color: rgb(201, 61, 57);
+    }
+
+    pre.hljl>span.hljl-sdB {
+      color: rgb(201, 61, 57);
+    }
+
+    pre.hljl>span.hljl-sdC {
+      color: rgb(201, 61, 57);
+    }
+
+    pre.hljl>span.hljl-se {
+      color: rgb(59, 151, 46);
+    }
+
+    pre.hljl>span.hljl-sh {
+      color: rgb(201, 61, 57);
+    }
+
+    pre.hljl>span.hljl-si {}
+
+    pre.hljl>span.hljl-so {
+      color: rgb(201, 61, 57);
+    }
+
+    pre.hljl>span.hljl-sr {
+      color: rgb(201, 61, 57);
+    }
+
+    pre.hljl>span.hljl-ss {
+      color: rgb(201, 61, 57);
+    }
+
+    pre.hljl>span.hljl-ssB {
+      color: rgb(201, 61, 57);
+    }
+
+    pre.hljl>span.hljl-nB {
+      color: rgb(59, 151, 46);
+    }
+
+    pre.hljl>span.hljl-nbB {
+      color: rgb(59, 151, 46);
+    }
+
+    pre.hljl>span.hljl-nfB {
+      color: rgb(59, 151, 46);
+    }
+
+    pre.hljl>span.hljl-nh {
+      color: rgb(59, 151, 46);
+    }
+
+    pre.hljl>span.hljl-ni {
+      color: rgb(59, 151, 46);
+    }
+
+    pre.hljl>span.hljl-nil {
+      color: rgb(59, 151, 46);
+    }
+
+    pre.hljl>span.hljl-noB {
+      color: rgb(59, 151, 46);
+    }
+
+    pre.hljl>span.hljl-oB {
+      color: rgb(102, 102, 102);
+      font-weight: bold;
+    }
+
+    pre.hljl>span.hljl-ow {
+      color: rgb(102, 102, 102);
+      font-weight: bold;
+    }
+
+    pre.hljl>span.hljl-p {}
+
+    pre.hljl>span.hljl-c {
+      color: rgb(153, 153, 119);
+      font-style: italic;
+    }
+
+    pre.hljl>span.hljl-ch {
+      color: rgb(153, 153, 119);
+      font-style: italic;
+    }
+
+    pre.hljl>span.hljl-cm {
+      color: rgb(153, 153, 119);
+      font-style: italic;
+    }
+
+    pre.hljl>span.hljl-cp {
+      color: rgb(153, 153, 119);
+      font-style: italic;
+    }
+
+    pre.hljl>span.hljl-cpB {
+      color: rgb(153, 153, 119);
+      font-style: italic;
+    }
+
+    pre.hljl>span.hljl-cs {
+      color: rgb(153, 153, 119);
+      font-style: italic;
+    }
+
+    pre.hljl>span.hljl-csB {
+      color: rgb(153, 153, 119);
+      font-style: italic;
+    }
+
+    pre.hljl>span.hljl-g {}
+
+    pre.hljl>span.hljl-gd {}
+
+    pre.hljl>span.hljl-ge {}
+
+    pre.hljl>span.hljl-geB {}
+
+    pre.hljl>span.hljl-gh {}
+
+    pre.hljl>span.hljl-gi {}
+
+    pre.hljl>span.hljl-go {}
+
+    pre.hljl>span.hljl-gp {}
+
+    pre.hljl>span.hljl-gs {}
+
+    pre.hljl>span.hljl-gsB {}
+
+    pre.hljl>span.hljl-gt {}
+  </style>
+
+
+
+  <style type="text/css">
+    @font-face {
+      font-style: normal;
+      font-weight: 300;
+    }
+
+    @font-face {
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    html {
+      font-family: sans-serif;
+      /* 1 */
+      -ms-text-size-adjust: 100%;
+      /* 2 */
+      -webkit-text-size-adjust: 100%;
+      /* 2 */
+    }
+
+    body {
+      margin: 0;
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    main,
+    menu,
+    nav,
+    section,
+    summary {
+      display: block;
+    }
+
+    audio,
+    canvas,
+    progress,
+    video {
+      display: inline-block;
+      /* 1 */
+      vertical-align: baseline;
+      /* 2 */
+    }
+
+    audio:not([controls]) {
+      display: none;
+      height: 0;
+    }
+
+    [hidden],
+    template {
+      display: none;
+    }
+
+    a:active,
+    a:hover {
+      outline: 0;
+    }
+
+    abbr[title] {
+      border-bottom: 1px dotted;
+    }
+
+    b,
+    strong {
+      font-weight: bold;
+    }
+
+    dfn {
+      font-style: italic;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 0.67em 0;
+    }
+
+    mark {
+      background: #ff0;
+      color: #000;
+    }
+
+    small {
+      font-size: 80%;
+    }
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+
+    sup {
+      top: -0.5em;
+    }
+
+    sub {
+      bottom: -0.25em;
+    }
+
+    img {
+      border: 0;
+    }
+
+    svg:not(:root) {
+      overflow: hidden;
+    }
+
+    figure {
+      margin: 1em 40px;
+    }
+
+    hr {
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      height: 0;
+    }
+
+    pre {
+      overflow: auto;
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+      font-family: monospace, monospace;
+      font-size: 1em;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      color: inherit;
+      /* 1 */
+      font: inherit;
+      /* 2 */
+      margin: 0;
+      /* 3 */
+    }
+
+    button {
+      overflow: visible;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    html input[type="button"],
+    /* 1 */
+    input[type="reset"],
+    input[type="submit"] {
+      -webkit-appearance: button;
+      /* 2 */
+      cursor: pointer;
+      /* 3 */
+    }
+
+    button[disabled],
+    html input[disabled] {
+      cursor: default;
+    }
+
+    button::-moz-focus-inner,
+    input::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+
+    input {
+      line-height: normal;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      box-sizing: border-box;
+      /* 1 */
+      padding: 0;
+      /* 2 */
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      height: auto;
+    }
+
+    input[type="search"] {
+      -webkit-appearance: textfield;
+      /* 1 */
+      -moz-box-sizing: content-box;
+      -webkit-box-sizing: content-box;
+      /* 2 */
+      box-sizing: content-box;
+    }
+
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+
+    fieldset {
+      border: 1px solid #c0c0c0;
+      margin: 0 2px;
+      padding: 0.35em 0.625em 0.75em;
+    }
+
+    legend {
+      border: 0;
+      /* 1 */
+      padding: 0;
+      /* 2 */
+    }
+
+    textarea {
+      overflow: auto;
+    }
+
+    optgroup {
+      font-weight: bold;
+    }
+
+    table {
+      font-family: monospace, monospace;
+      font-size: 0.8em;
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    td,
+    th {
+      padding: 0;
+    }
+
+    thead th {
+      border-bottom: 1px solid black;
+      background-color: white;
+    }
+
+    tr:nth-child(odd) {
+      background-color: rgb(248, 248, 248);
+    }
+
+
+    /*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    .column,
+    .columns {
+      width: 100%;
+      float: left;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 400px) {
+      .container {
+        width: 85%;
+        padding: 0;
+      }
+    }
+
+    @media (min-width: 550px) {
+      .container {
+        width: 80%;
+      }
+
+      .column,
+      .columns {
+        margin-left: 4%;
+      }
+
+      .column:first-child,
+      .columns:first-child {
+        margin-left: 0;
+      }
+
+      .one.column,
+      .one.columns {
+        width: 4.66666666667%;
+      }
+
+      .two.columns {
+        width: 13.3333333333%;
+      }
+
+      .three.columns {
+        width: 22%;
+      }
+
+      .four.columns {
+        width: 30.6666666667%;
+      }
+
+      .five.columns {
+        width: 39.3333333333%;
+      }
+
+      .six.columns {
+        width: 48%;
+      }
+
+      .seven.columns {
+        width: 56.6666666667%;
+      }
+
+      .eight.columns {
+        width: 65.3333333333%;
+      }
+
+      .nine.columns {
+        width: 74.0%;
+      }
+
+      .ten.columns {
+        width: 82.6666666667%;
+      }
+
+      .eleven.columns {
+        width: 91.3333333333%;
+      }
+
+      .twelve.columns {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .one-third.column {
+        width: 30.6666666667%;
+      }
+
+      .two-thirds.column {
+        width: 65.3333333333%;
+      }
+
+      .one-half.column {
+        width: 48%;
+      }
+
+      /* Offsets */
+      .offset-by-one.column,
+      .offset-by-one.columns {
+        margin-left: 8.66666666667%;
+      }
+
+      .offset-by-two.column,
+      .offset-by-two.columns {
+        margin-left: 17.3333333333%;
+      }
+
+      .offset-by-three.column,
+      .offset-by-three.columns {
+        margin-left: 26%;
+      }
+
+      .offset-by-four.column,
+      .offset-by-four.columns {
+        margin-left: 34.6666666667%;
+      }
+
+      .offset-by-five.column,
+      .offset-by-five.columns {
+        margin-left: 43.3333333333%;
+      }
+
+      .offset-by-six.column,
+      .offset-by-six.columns {
+        margin-left: 52%;
+      }
+
+      .offset-by-seven.column,
+      .offset-by-seven.columns {
+        margin-left: 60.6666666667%;
+      }
+
+      .offset-by-eight.column,
+      .offset-by-eight.columns {
+        margin-left: 69.3333333333%;
+      }
+
+      .offset-by-nine.column,
+      .offset-by-nine.columns {
+        margin-left: 78.0%;
+      }
+
+      .offset-by-ten.column,
+      .offset-by-ten.columns {
+        margin-left: 86.6666666667%;
+      }
+
+      .offset-by-eleven.column,
+      .offset-by-eleven.columns {
+        margin-left: 95.3333333333%;
+      }
+
+      .offset-by-one-third.column,
+      .offset-by-one-third.columns {
+        margin-left: 34.6666666667%;
+      }
+
+      .offset-by-two-thirds.column,
+      .offset-by-two-thirds.columns {
+        margin-left: 69.3333333333%;
+      }
+
+      .offset-by-one-half.column,
+      .offset-by-one-half.columns {
+        margin-left: 52%;
+      }
+
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      font-size: 1.5em;
+      /* currently ems cause chrome bug misinterpreting rems on body element */
+      line-height: 1.6;
+      font-weight: 400;
+      font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #222;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 0;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    h1 {
+      font-size: 3.6rem;
+      line-height: 1.2;
+      letter-spacing: -.1rem;
+    }
+
+    h2 {
+      font-size: 3.4rem;
+      line-height: 1.25;
+      letter-spacing: -.1rem;
+    }
+
+    h3 {
+      font-size: 3.2rem;
+      line-height: 1.3;
+      letter-spacing: -.1rem;
+    }
+
+    h4 {
+      font-size: 2.8rem;
+      line-height: 1.35;
+      letter-spacing: -.08rem;
+    }
+
+    h5 {
+      font-size: 2.4rem;
+      line-height: 1.5;
+      letter-spacing: -.05rem;
+    }
+
+    h6 {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    a {
+      color: #1EAEDB;
+    }
+
+    a:hover {
+      color: #0FA0CE;
+    }
+
+    .button,
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"] {
+      display: inline-block;
+      height: 38px;
+      padding: 0 30px;
+      color: #555;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 38px;
+      letter-spacing: .1rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
+      background-color: transparent;
+      border-radius: 4px;
+      border: 1px solid #bbb;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+
+    .button:hover,
+    button:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    input[type="button"]:hover,
+    .button:focus,
+    button:focus,
+    input[type="submit"]:focus,
+    input[type="reset"]:focus,
+    input[type="button"]:focus {
+      color: #333;
+      border-color: #888;
+      outline: 0;
+    }
+
+    .button.button-primary,
+    button.button-primary,
+    input[type="submit"].button-primary,
+    input[type="reset"].button-primary,
+    input[type="button"].button-primary {
+      color: #FFF;
+      background-color: #33C3F0;
+      border-color: #33C3F0;
+    }
+
+    .button.button-primary:hover,
+    button.button-primary:hover,
+    input[type="submit"].button-primary:hover,
+    input[type="reset"].button-primary:hover,
+    input[type="button"].button-primary:hover,
+    .button.button-primary:focus,
+    button.button-primary:focus,
+    input[type="submit"].button-primary:focus,
+    input[type="reset"].button-primary:focus,
+    input[type="button"].button-primary:focus {
+      color: #FFF;
+      background-color: #1EAEDB;
+      border-color: #1EAEDB;
+    }
+
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="text"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    textarea,
+    select {
+      height: 38px;
+      padding: 6px 10px;
+      /* The 6px vertically centers text on FF, ignored by Webkit */
+      background-color: #fff;
+      border: 1px solid #D1D1D1;
+      border-radius: 4px;
+      box-shadow: none;
+      box-sizing: border-box;
+    }
+
+    /* Removes awkward default styles on some inputs for iOS */
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="text"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    textarea {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    textarea {
+      min-height: 65px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    input[type="search"]:focus,
+    input[type="text"]:focus,
+    input[type="tel"]:focus,
+    input[type="url"]:focus,
+    input[type="password"]:focus,
+    textarea:focus,
+    select:focus {
+      border: 1px solid #33C3F0;
+      outline: 0;
+    }
+
+    label,
+    legend {
+      display: block;
+      margin-bottom: .5rem;
+      font-weight: 600;
+    }
+
+    fieldset {
+      padding: 0;
+      border-width: 0;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      display: inline;
+    }
+
+    label>.label-body {
+      display: inline-block;
+      margin-left: .5rem;
+      font-weight: normal;
+    }
+
+    ul {
+      list-style: circle;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    ul ul,
+    ul ol,
+    ol ol,
+    ol ul {
+      margin: 1.5rem 0 1.5rem 3rem;
+      font-size: 90%;
+    }
+
+    li>p {
+      margin: 0;
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #E1E1E1;
+    }
+
+    th:first-child,
+    td:first-child {
+      padding-left: 0;
+    }
+
+    th:last-child,
+    td:last-child {
+      padding-right: 0;
+    }
+
+    button,
+    .button {
+      margin-bottom: 1rem;
+    }
+
+    input,
+    textarea,
+    select,
+    fieldset {
+      margin-bottom: 1.5rem;
+    }
+
+    pre,
+    blockquote,
+    dl,
+    figure,
+    table,
+    p,
+    ul,
+    ol,
+    form {
+      margin-bottom: 1.0rem;
+    }
+
+    .u-full-width {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .u-max-full-width {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .u-pull-right {
+      float: right;
+    }
+
+    .u-pull-left {
+      float: left;
+    }
+
+    hr {
+      margin-top: 3rem;
+      margin-bottom: 3.5rem;
+      border-width: 0;
+      border-top: 1px solid #E1E1E1;
+    }
+
+    .container:after,
+    .row:after,
+    .u-cf {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    pre {
+      display: block;
+      padding: 9.5px;
+      margin: 0 0 10px;
+      font-size: 13px;
+      line-height: 1.42857143;
+      word-break: break-all;
+      word-wrap: break-word;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    pre.hljl {
+      margin: 0 0 10px;
+      display: block;
+      background: #f5f5f5;
+      border-radius: 4px;
+      padding: 5px;
+    }
+
+    pre.output {
+      background: #ffffff;
+    }
+
+    pre.code {
+      background: #ffffff;
+    }
+
+    pre.julia-error {
+      color: red
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-size: 13px;
+    }
+
+
+    @media (min-width: 400px) {}
+
+    @media (min-width: 550px) {}
+
+    @media (min-width: 750px) {}
+
+    @media (min-width: 1000px) {}
+
+    @media (min-width: 1200px) {}
+
+    h1.title {
+      margin-top: 20px
+    }
+
+    img {
+      max-width: 100%
+    }
+
+    div.title {
+      text-align: center;
+    }
+  </style>
+
+
+
+</HEAD>
+
+<BODY>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 twelve columns">
+
+        <div class="title">
+
+
+
+        </div>
+
+        <h1>Almost Trivial: Parallelizing a Specialized Matrix Type in Julia</h1>
+        <p><a
+            href="https://mybinder.org/v2/gh/mdavezac/blog/master?filepath&#61;shared-memory-parallelization.ipynb"><img
+              src="https://mybinder.org/badge_logo.svg" alt="Binder" /></a></p>
+        <p>For some, Julia&#39;s distinctive feature is its speed. For others it is how easy it Julia makes it to
+          combine together entirely unrelated projects into something new and useful.</p>
+        <p>Here we&#39;ll try and demonstrate this by parallelizing the creation and usage of banded block-banded
+          matrices. These matrices have a very specific super-structure and inner structure: they are composed of bands
+          of block matrices, where each block is itself banded. Matrix-vector operations are much less demanding for
+          banded matrices than for square matrices. They can arise when <a
+            href="https://approximatelyfunctioning.blogspot.com/2018/12/banded-matrices-and-ordinary.html">solving
+            differential equations</a>.</p>
+        <p>There are quite a few ways the parallelization could be done, but here we want to use Julia&#39;s ability to
+          &#40;fairly&#41; easily mix and match concepts. So we&#39;ll mix the concept of banded block-banded matrices
+          themselves with Julia&#39;s standard shared arrays. If we can parallelize simply by switching storage types
+          that the banded block-banded matrix operate on, then it should be fairly easy to extend the same technique to
+          different parallelization schemes, whether MPI or GPUs.</p>
+        <h2>Setting things up</h2>
+        <p>In order to run the code in parallel, we first need to add worker processes. The following cell adds 7
+          processes on the current machine. We also create an environment with a few libraries that will be used in this
+          notebook. Downloading and pre-compiling libraries can be quite slow. That&#39;s okay, it&#39;s a one-off cost
+          we incur only when setting up a new project.</p>
+
+
+        <pre class='hljl'>
+<span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>Pkg</span><span class='hljl-t'>
+
+</span><span class='hljl-n'>Pkg</span><span class='hljl-oB'>.</span><span class='hljl-nf'>activate</span><span class='hljl-p'>(</span><span class='hljl-nf'>pwd</span><span class='hljl-p'>())</span>
+</pre>
+
+
+        <pre class="output">
+Activating environment at &#96;~/blog/Project.toml&#96;
+</pre>
+
+
+
+        <pre class='hljl'>
+<span class='hljl-n'>packages</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-t'>
+    </span><span class='hljl-s'>&quot;Distributed&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-s'>&quot;BlockBandedMatrices&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-s'>&quot;SharedArrays&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-s'>&quot;ArrayLayouts&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'>
+    </span><span class='hljl-s'>&quot;DataFrames&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-s'>&quot;VegaLite&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-s'>&quot;BenchmarkTools&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-s'>&quot;BlockArrays&quot;</span><span class='hljl-t'>
+</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>package</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-n'>packages</span><span class='hljl-t'>
+    </span><span class='hljl-n'>Pkg</span><span class='hljl-oB'>.</span><span class='hljl-nf'>add</span><span class='hljl-p'>(</span><span class='hljl-n'>package</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+        <pre class="output">
+Updating registry at &#96;~/.julia/registries/General&#96;
+ Resolving package versions...
+ &#91;no changes&#93;
+</pre>
+
+
+
+        <pre class='hljl'>
+<span class='hljl-n'>Pkg</span><span class='hljl-oB'>.</span><span class='hljl-nf'>instantiate</span><span class='hljl-p'>()</span><span class='hljl-t'>
+</span><span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>DataFrames</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>BlockBandedMatrices</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>SharedArrays</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>VegaLite</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>Distributed</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>BenchmarkTools</span><span class='hljl-t'>
+</span><span class='hljl-nf'>nprocs</span><span class='hljl-p'>()</span><span class='hljl-t'> </span><span class='hljl-oB'>&lt;</span><span class='hljl-t'> </span><span class='hljl-ni'>8</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-nf'>addprocs</span><span class='hljl-p'>(</span><span class='hljl-ni'>8</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-nf'>nprocs</span><span class='hljl-p'>())</span><span class='hljl-t'>
+</span><span class='hljl-nf'>nprocs</span><span class='hljl-p'>()</span>
+</pre>
+
+
+        <pre class="output">
+8
+</pre>
+
+
+        <p>There is still an extra setup step before we can get going. Now that workers have been created, they need to
+          load the same environment that we have on the main process. Otherwise, when we ask them to create a
+          block-banded matrix, the workers will have no idea what that is. This is where <code>@everywhere</code> comes
+          in. Its purpose is to have all processes run the same commands:</p>
+
+
+        <pre class='hljl'>
+<span class='hljl-nd'>@everywhere</span><span class='hljl-t'> </span><span class='hljl-k'>begin</span><span class='hljl-t'>
+    </span><span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>Pkg</span><span class='hljl-t'>
+    </span><span class='hljl-n'>Pkg</span><span class='hljl-oB'>.</span><span class='hljl-nf'>activate</span><span class='hljl-p'>(</span><span class='hljl-oB'>$</span><span class='hljl-p'>(</span><span class='hljl-nf'>pwd</span><span class='hljl-p'>()))</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+        <pre class="output">
+Activating environment at &#96;~/blog/Project.toml&#96;
+      From worker 8:	Activating environment at &#96;~/blog/Project.toml&#96;
+      From worker 7:	Activating environment at &#96;~/blog/Project.toml&#96;
+      From worker 4:	Activating environment at &#96;~/blog/Project.toml&#96;
+      From worker 3:	Activating environment at &#96;~/blog/Project.toml&#96;
+      From worker 6:	Activating environment at &#96;~/blog/Project.toml&#96;
+      From worker 5:	Activating environment at &#96;~/blog/Project.toml&#96;
+      From worker 2:	Activating environment at &#96;~/blog/Project.toml&#96;
+</pre>
+
+
+
+        <pre class='hljl'>
+<span class='hljl-nd'>@everywhere</span><span class='hljl-t'> </span><span class='hljl-k'>begin</span><span class='hljl-t'>
+    </span><span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>DataFrames</span><span class='hljl-t'>
+    </span><span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>BlockBandedMatrices</span><span class='hljl-oB'>:</span><span class='hljl-t'> </span><span class='hljl-n'>BandedBlockBandedMatrix</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>_BandedBlockBandedMatrix</span><span class='hljl-t'>
+    </span><span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>BlockBandedMatrices</span><span class='hljl-oB'>:</span><span class='hljl-t'> </span><span class='hljl-n'>BandedBlockBandedSizes</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>blockbandwidths</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>subblockbandwidths</span><span class='hljl-t'>
+    </span><span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>BlockArrays</span><span class='hljl-oB'>:</span><span class='hljl-t'> </span><span class='hljl-n'>PseudoBlockArray</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>Block</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>nblocks</span><span class='hljl-t'>
+    </span><span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>SharedArrays</span><span class='hljl-oB'>:</span><span class='hljl-t'> </span><span class='hljl-n'>SharedArray</span><span class='hljl-t'>
+    </span><span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>ArrayLayouts</span><span class='hljl-oB'>:</span><span class='hljl-t'> </span><span class='hljl-n'>muladd!</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>MemoryLayout</span><span class='hljl-t'>
+    </span><span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>VegaLite</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+
+        <p>Finally we can get to work. The goal is to mix and match two different concepts Julia understands:
+          block-banded matrix and shared arrays. Thanks to its typing system and multiple dispatch, Julia is extremely
+          adept at creating unholy love children between unlikely pairs. So the next few lines create a type alias, i.e.
+          a nickname, for a banded block-banded matrix where the underlying storage type is a shared array:</p>
+
+
+        <pre class='hljl'>
+<span class='hljl-nd'>@everywhere</span><span class='hljl-t'> </span><span class='hljl-k'>begin</span><span class='hljl-t'>
+    </span><span class='hljl-kd'>const</span><span class='hljl-t'> </span><span class='hljl-n'>SharedPseudoBlock</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>PseudoBlockArray</span><span class='hljl-p'>{</span><span class='hljl-n'>T</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>SharedArray</span><span class='hljl-p'>{</span><span class='hljl-n'>T</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>},</span><span class='hljl-t'> </span><span class='hljl-n'>B</span><span class='hljl-p'>}</span><span class='hljl-t'> </span><span class='hljl-n'>where</span><span class='hljl-t'> </span><span class='hljl-p'>{</span><span class='hljl-n'>T</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>B</span><span class='hljl-p'>}</span><span class='hljl-t'>
+    </span><span class='hljl-kd'>const</span><span class='hljl-t'> </span><span class='hljl-n'>SharedBandedBlockBandedMatrix</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>BandedBlockBandedMatrix</span><span class='hljl-p'>{</span><span class='hljl-n'>T</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>SharedPseudoBlock</span><span class='hljl-p'>{</span><span class='hljl-n'>T</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>B</span><span class='hljl-p'>}}</span><span class='hljl-t'> </span><span class='hljl-n'>where</span><span class='hljl-t'> </span><span class='hljl-p'>{</span><span class='hljl-n'>T</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>B</span><span class='hljl-p'>}</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+
+        <p><code>T</code> refers to the element type. It is left unspecified for now thanks to the <code>where</code>
+          syntax. Later we will be able to specialize it and create matrices of integers or floating points
+          &#40;<code>B</code> refers to the type coding for block-sizes and is an implementation detail as far we are
+          concerned&#41;.</p>
+        <p>There two types above are nested matryoshka dolls. In practice each type adds a bit more structure until
+          we have full banded block-banded matrix. At the very bottom, we have the shared array, responsible for
+          ensuring the data can be viewed and modified by different Julia processes. Then above that,
+          <code>PseudoBlockArray</code> views that same data as blocks: we will be able to address each block
+          independently as though it were a separate array. Finally, <code>BandedBlockBandedMatrix</code> adds a banded
+          structure to the blocks: only blocks that are non-zero actually are represented in memory, and each block
+          itself contains only non-zero elements &#40;This is almost true. For more information see <a
+            href="https://www.netlib.org/lapack/lug/node124.html">blas</a>.&#41;.</p>
+        <p>Now we add some functions to create un-initialized matrices. An un-initialized matrix is fully functional.
+          However, the code makes no guarantee with respect to the matrix coefficients. It could be a matrix filled with
+          zeros, or filled with random or less random numbers, depending on what the memory now allocated to the array
+          used to hold. The constructors for the block-banded matrices are somewhat faffy. The main point is that we can
+          create a banded block-banded matrix by specifying the size of the blocks, the bandwidth of the matrix of
+          blocks and the bandwidth of the blocks themselves, where bandwidth means the number of non-zero upper and
+          lower diagonals. </p>
+
+
+        <pre class='hljl'>
+<span class='hljl-nd'>@everywhere</span><span class='hljl-t'> </span><span class='hljl-k'>begin</span><span class='hljl-t'>
+    </span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>SharedBandedBlockBandedMatrix</span><span class='hljl-p'>{</span><span class='hljl-n'>T</span><span class='hljl-p'>}(</span><span class='hljl-t'>
+            </span><span class='hljl-oB'>::</span><span class='hljl-n'>UndefInitializer</span><span class='hljl-p'>,</span><span class='hljl-t'>
+            </span><span class='hljl-n'>dims</span><span class='hljl-oB'>::</span><span class='hljl-nf'>NTuple</span><span class='hljl-p'>{</span><span class='hljl-ni'>2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>AbstractVector</span><span class='hljl-p'>{</span><span class='hljl-n'>Int</span><span class='hljl-p'>}},</span><span class='hljl-t'>
+            </span><span class='hljl-n'>lu</span><span class='hljl-oB'>::</span><span class='hljl-nf'>NTuple</span><span class='hljl-p'>{</span><span class='hljl-ni'>2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>Int</span><span class='hljl-p'>},</span><span class='hljl-t'>
+            </span><span class='hljl-n'>λμ</span><span class='hljl-oB'>::</span><span class='hljl-nf'>NTuple</span><span class='hljl-p'>{</span><span class='hljl-ni'>2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>Int</span><span class='hljl-p'>};</span><span class='hljl-t'>
+            </span><span class='hljl-n'>kwargs</span><span class='hljl-oB'>...</span><span class='hljl-t'>
+    </span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-n'>where</span><span class='hljl-t'> </span><span class='hljl-n'>T</span><span class='hljl-t'>
+        </span><span class='hljl-n'>blocksizes</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>BandedBlockBandedSizes</span><span class='hljl-p'>(</span><span class='hljl-n'>dims</span><span class='hljl-oB'>...</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>lu</span><span class='hljl-oB'>...</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>λμ</span><span class='hljl-oB'>...</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>shared</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>SharedArray</span><span class='hljl-p'>{</span><span class='hljl-n'>T</span><span class='hljl-p'>}(</span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>blocksizes</span><span class='hljl-p'>);</span><span class='hljl-t'> </span><span class='hljl-n'>kwargs</span><span class='hljl-oB'>...</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>block</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>PseudoBlockArray</span><span class='hljl-p'>(</span><span class='hljl-n'>shared</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>blocksizes</span><span class='hljl-oB'>.</span><span class='hljl-n'>data_block_sizes</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>_BandedBlockBandedMatrix</span><span class='hljl-p'>(</span><span class='hljl-n'>block</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>blocksizes</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+
+        <p>So now we have a block-banded matrix which is shared by multiple processes. The magic works because
+          <code>BandedBlockBandedMatrix</code> is an abstraction, namely a thin layer of behaviours sprinkled over a
+          type that understands blocks. This type, <code>PseudoBlockArray</code> is itself an abstraction that sprinkles
+          a few behaviours over an array. And this array is a <code>SharedArray</code>. So when the block banded matrix
+          needs to see one of its elements, it knows it should refer that request via a block. And the block knows it
+          should refer the request further down an array. And the array happens to be shared across processes. It&#39;s
+          turtles all the way down except for the turtles.</p>
+        <p>To illustrate this, let&#39;s create a banded block-banded matrix with blocks composed of 3x4 matrices
+          &#40;<code>n</code> and <code>m</code>&#41;, with the band of blocks from <code>l</code> to <code>u</code> and
+          each block-banded from <code>λ</code> to <code>μ</code>.</p>
+
+
+        <pre class='hljl'>
+<span class='hljl-cs'># Number of blocks of rows, and number of rows per block</span><span class='hljl-t'>
+</span><span class='hljl-n'>N</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>n</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>3</span><span class='hljl-t'>
+</span><span class='hljl-cs'># Number of blocks of columns, and number of columns per block</span><span class='hljl-t'>
+</span><span class='hljl-n'>M</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>m</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>N</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>n</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+</span><span class='hljl-cs'># number of non-zero lower and upper diagonals of the banded &quot;super&quot; matrix of blocks</span><span class='hljl-t'>
+</span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>u</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'>
+</span><span class='hljl-cs'># number of lower and upper diagonals of the banded block</span><span class='hljl-t'>
+</span><span class='hljl-n'>λ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>μ</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-t'>
+</span><span class='hljl-n'>A</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>SharedBandedBlockBandedMatrix</span><span class='hljl-p'>{</span><span class='hljl-n'>Float64</span><span class='hljl-p'>}(</span><span class='hljl-n'>undef</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>n</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>N</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>m</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>M</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>u</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>λ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>μ</span><span class='hljl-p'>))</span>
+</pre>
+
+
+        <pre class="output">
+2×3-blocked 6×12 BandedBlockBandedMatrix&#123;Float64,PseudoBlockArray&#123;Float64,2
+,SharedArray&#123;Float64,2&#125;,BlockArrays.BlockSizes&#123;2,Tuple&#123;Array&#123;Int64,1&#125;,Array
+&#123;Int64,1&#125;&#125;&#125;&#125;&#125;:
+ 0.0  0.0  0.0   ⋅   │   ⋅    ⋅    ⋅    ⋅   │   ⋅    ⋅    ⋅    ⋅
+  ⋅   0.0  0.0  0.0  │   ⋅    ⋅    ⋅    ⋅   │   ⋅    ⋅    ⋅    ⋅
+  ⋅    ⋅   0.0  0.0  │   ⋅    ⋅    ⋅    ⋅   │   ⋅    ⋅    ⋅    ⋅
+ ────────────────────┼──────────────────────┼────────────────────
+ 0.0  0.0  0.0   ⋅   │  0.0  0.0  0.0   ⋅   │   ⋅    ⋅    ⋅    ⋅
+  ⋅   0.0  0.0  0.0  │   ⋅   0.0  0.0  0.0  │   ⋅    ⋅    ⋅    ⋅
+  ⋅    ⋅   0.0  0.0  │   ⋅    ⋅   0.0  0.0  │   ⋅    ⋅    ⋅    ⋅
+</pre>
+
+
+        <p>But it&#39;s not all magic. We can create a matrix that is accessible to all the workers. However, that&#39;s
+          just data. Logic itself is still sequential. In other words, if we multiply the shared matrix with a vector,
+          then each process will run the whole operation. We still have to teach them how to work together.</p>
+        <h2>Parallelizing matrix initialization</h2>
+        <p>We first try and get processes to collaborate on filling up the matrix with meaningful values:</p>
+
+
+        <pre class='hljl'>
+<span class='hljl-nd'>@everywhere</span><span class='hljl-t'> </span><span class='hljl-k'>begin</span><span class='hljl-t'>
+    </span><span class='hljl-s'>&quot;&quot;&quot;Populates the shared banded block-banded matrix in parallel&quot;&quot;&quot;</span><span class='hljl-t'>
+    </span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>populate!</span><span class='hljl-p'>(</span><span class='hljl-t'>
+            </span><span class='hljl-n'>block_populate!</span><span class='hljl-oB'>::</span><span class='hljl-n'>Function</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>::</span><span class='hljl-n'>SharedBandedBlockBandedMatrix</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-nd'>@sync</span><span class='hljl-t'> </span><span class='hljl-k'>begin</span><span class='hljl-t'>
+            </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>p</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>proc</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-nf'>enumerate</span><span class='hljl-p'>(</span><span class='hljl-nf'>procs</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>data</span><span class='hljl-oB'>.</span><span class='hljl-n'>blocks</span><span class='hljl-p'>))</span><span class='hljl-t'>
+                </span><span class='hljl-nd'>@async</span><span class='hljl-t'> </span><span class='hljl-nf'>remotecall_wait</span><span class='hljl-p'>(</span><span class='hljl-n'>populate!</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>proc</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>block_populate!</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>p</span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-k'>end</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+        </span><span class='hljl-n'>A</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+    </span><span class='hljl-s'>&quot;&quot;&quot;Populates the blocks of A that are assigned to process p.&quot;&quot;&quot;</span><span class='hljl-t'>
+    </span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>populate!</span><span class='hljl-p'>(</span><span class='hljl-t'>
+            </span><span class='hljl-n'>block_populate!</span><span class='hljl-oB'>::</span><span class='hljl-n'>Function</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>::</span><span class='hljl-n'>SharedBandedBlockBandedMatrix</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>p</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>n</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>sum</span><span class='hljl-p'>(</span><span class='hljl-t'>
+            </span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>u</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>nblocks</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>))</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'>  </span><span class='hljl-nf'>max</span><span class='hljl-p'>(</span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+            </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-nf'>nblocks</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>m</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-nf'>procs</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>data</span><span class='hljl-oB'>.</span><span class='hljl-n'>blocks</span><span class='hljl-p'>))</span><span class='hljl-t'>
+        </span><span class='hljl-n'>start</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>n</span><span class='hljl-t'> </span><span class='hljl-oB'>÷</span><span class='hljl-t'> </span><span class='hljl-n'>m</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>p</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-n'>n</span><span class='hljl-t'> </span><span class='hljl-oB'>%</span><span class='hljl-t'> </span><span class='hljl-n'>m</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>p</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>stop</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>n</span><span class='hljl-t'> </span><span class='hljl-oB'>÷</span><span class='hljl-t'> </span><span class='hljl-n'>m</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-n'>p</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-n'>n</span><span class='hljl-t'> </span><span class='hljl-oB'>%</span><span class='hljl-t'> </span><span class='hljl-n'>m</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>p</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>k</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'>
+        </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-nf'>nblocks</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>j</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-nf'>max</span><span class='hljl-p'>(</span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-oB'>:</span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>u</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>nblocks</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>))</span><span class='hljl-t'>
+            </span><span class='hljl-k'>if</span><span class='hljl-t'> </span><span class='hljl-n'>k</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;=</span><span class='hljl-t'> </span><span class='hljl-n'>stop</span><span class='hljl-t'>
+                </span><span class='hljl-k'>break</span><span class='hljl-t'>
+            </span><span class='hljl-k'>elseif</span><span class='hljl-t'> </span><span class='hljl-n'>k</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;=</span><span class='hljl-t'> </span><span class='hljl-n'>start</span><span class='hljl-t'>
+                </span><span class='hljl-nf'>block_populate!</span><span class='hljl-p'>(</span><span class='hljl-nf'>view</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>Block</span><span class='hljl-p'>(</span><span class='hljl-n'>i</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>j</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>j</span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-k'>end</span><span class='hljl-t'>
+            </span><span class='hljl-n'>k</span><span class='hljl-t'> </span><span class='hljl-oB'>+=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+        </span><span class='hljl-n'>A</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+
+        <p>The code proceeds in a cascade of three steps. First we have a function to signal workers to start working.
+          Then we have a function that will run on each worker process. It simply parcels out the list of mutable blocks
+          in the banded matrix and figures out which are assigned to its process id. For each assigned block, it then
+          calls the third function in the cascade, to actually populate the given block.</p>
+        <p>If the number of block <span class="math">$n$</span> were exactly divisible by the number of processes <span
+            class="math">$m$</span>, then they would be parcelled out by assigning the first <span
+            class="math">$\frac{n}{m}$</span> blocks to process 0, the second <span class="math">$\frac{n}{m}$</span>
+          blocks to process 1, and so on. The code does just that. However it also takes care of the case where <span
+            class="math">$n$</span> is not a multiple of <span class="math">$m$</span>. In that case, assuming there
+          <span class="math">$n \% m$</span> leftover blocks &#40;<span class="math">$\%$</span> is the modulo
+          operation, or remainder&#41;, then each of the first <span class="math">$n \% m$</span> processes get one
+          extra block. The expression <code>min&#40;n &#37; m, p&#41;</code> computes the cumulative number of extra
+          blocks assigned to processes <span class="math">$p$</span> and lower.</p>
+        <p>Performance-hungry users will notice that this simple-minded implementation runs on idle for a fair bit of
+          the loop over blocks. But in practice, it turns out to be a minimal waste of resources compared to the actual
+          cost of the calculation. Frankly, it&#39;s the lack of elegance that grates, rather than any performance
+          consideration. But it&#39;s simple.</p>
+        <p>The parallelization magic happens in the <code>@sync</code> for loop. In practice, each <code>@async</code>
+          loop item generates a task and schedules it to be sent and executed by process <code>proc</code>. Then, right
+          before exiting the <code>@sync</code> code-block, the tasks are sent over to the processes, and the code waits
+          until the tasks are finished running.</p>
+        <p>In practice, usage looks like this:</p>
+
+
+        <pre class='hljl'>
+<span class='hljl-nf'>populate!</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-k'>do</span><span class='hljl-t'> </span><span class='hljl-n'>block</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>j</span><span class='hljl-t'>
+    </span><span class='hljl-cs'># block: a view of the block to populate</span><span class='hljl-t'>
+    </span><span class='hljl-cs'># i, j: indices of the block</span><span class='hljl-t'>
+    </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>block</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>y</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-nf'>max</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>λ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-oB'>:</span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>μ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>block</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>))</span><span class='hljl-t'>
+        </span><span class='hljl-n'>block</span><span class='hljl-p'>[</span><span class='hljl-n'>x</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>y</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+        <pre class="output">
+2×3-blocked 6×12 BandedBlockBandedMatrix&#123;Float64,PseudoBlockArray&#123;Float64,2
+,SharedArray&#123;Float64,2&#125;,BlockArrays.BlockSizes&#123;2,Tuple&#123;Array&#123;Int64,1&#125;,Array
+&#123;Int64,1&#125;&#125;&#125;&#125;&#125;:
+ 1.0  1.0  1.0   ⋅   │   ⋅    ⋅    ⋅    ⋅   │   ⋅    ⋅    ⋅    ⋅
+  ⋅   1.0  1.0  1.0  │   ⋅    ⋅    ⋅    ⋅   │   ⋅    ⋅    ⋅    ⋅
+  ⋅    ⋅   1.0  1.0  │   ⋅    ⋅    ⋅    ⋅   │   ⋅    ⋅    ⋅    ⋅
+ ────────────────────┼──────────────────────┼────────────────────
+ 1.0  1.0  1.0   ⋅   │  1.0  1.0  1.0   ⋅   │   ⋅    ⋅    ⋅    ⋅
+  ⋅   1.0  1.0  1.0  │   ⋅   1.0  1.0  1.0  │   ⋅    ⋅    ⋅    ⋅
+  ⋅    ⋅   1.0  1.0  │   ⋅    ⋅   1.0  1.0  │   ⋅    ⋅    ⋅    ⋅
+</pre>
+
+
+        <p>For comparison we also construct the serial version of populate, as well as a simple scheme to fill blocks
+          with ones:</p>
+
+
+        <pre class='hljl'>
+<span class='hljl-nd'>@everywhere</span><span class='hljl-t'> </span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>populate!</span><span class='hljl-p'>(</span><span class='hljl-t'>
+        </span><span class='hljl-n'>block_populate!</span><span class='hljl-oB'>::</span><span class='hljl-n'>Function</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>::</span><span class='hljl-n'>BandedBlockBandedMatrix</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-nf'>nblocks</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>j</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-nf'>max</span><span class='hljl-p'>(</span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-oB'>:</span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>u</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>nblocks</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>))</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>block_populate!</span><span class='hljl-p'>(</span><span class='hljl-nf'>view</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>Block</span><span class='hljl-p'>(</span><span class='hljl-n'>i</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>j</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>j</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+    </span><span class='hljl-n'>A</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+</span><span class='hljl-nd'>@everywhere</span><span class='hljl-t'> </span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>simplefill!</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-oB'>::</span><span class='hljl-n'>BandedBlockBandedMatrix</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-nf'>populate!</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-k'>do</span><span class='hljl-t'> </span><span class='hljl-n'>bk</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>j</span><span class='hljl-t'>
+        </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>bk</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>y</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-nf'>max</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>λ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-oB'>:</span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>μ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>bk</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>))</span><span class='hljl-t'>
+            </span><span class='hljl-n'>bk</span><span class='hljl-p'>[</span><span class='hljl-n'>x</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>y</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>y</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>j</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+
+        <p>And now we can run benchmarks:</p>
+
+
+        <pre class='hljl'>
+<span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>BenchmarkTools</span><span class='hljl-t'>
+
+</span><span class='hljl-n'>N</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>n</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>8</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>3</span><span class='hljl-t'>
+</span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>u</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>λ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>μ</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+</span><span class='hljl-n'>M</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>m</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>6</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>n</span><span class='hljl-t'>
+</span><span class='hljl-n'>A</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>SharedBandedBlockBandedMatrix</span><span class='hljl-p'>{</span><span class='hljl-n'>Float64</span><span class='hljl-p'>}(</span><span class='hljl-n'>undef</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>n</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>N</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>m</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>M</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>u</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>λ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>μ</span><span class='hljl-p'>))</span><span class='hljl-t'>
+</span><span class='hljl-nd'>@benchmark</span><span class='hljl-t'> </span><span class='hljl-nf'>simplefill!</span><span class='hljl-p'>(</span><span class='hljl-oB'>$</span><span class='hljl-n'>A</span><span class='hljl-p'>)</span>
+</pre>
+
+
+        <pre class="output">
+BenchmarkTools.Trial:
+  memory estimate:  58.13 KiB
+  allocs estimate:  991
+  --------------
+  minimum time:     1.037 ms &#40;0.00&#37; GC&#41;
+  median time:      1.201 ms &#40;0.00&#37; GC&#41;
+  mean time:        1.247 ms &#40;1.13&#37; GC&#41;
+  maximum time:     37.296 ms &#40;49.16&#37; GC&#41;
+  --------------
+  samples:          3993
+  evals/sample:     1
+</pre>
+
+
+
+        <pre class='hljl'>
+<span class='hljl-n'>B</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>BandedBlockBandedMatrix</span><span class='hljl-p'>{</span><span class='hljl-n'>Float64</span><span class='hljl-p'>}(</span><span class='hljl-n'>undef</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>n</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>N</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>m</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>M</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>u</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>λ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>μ</span><span class='hljl-p'>))</span><span class='hljl-t'>
+</span><span class='hljl-nd'>@benchmark</span><span class='hljl-t'> </span><span class='hljl-nf'>simplefill!</span><span class='hljl-p'>(</span><span class='hljl-oB'>$</span><span class='hljl-n'>B</span><span class='hljl-p'>)</span>
+</pre>
+
+
+        <pre class="output">
+BenchmarkTools.Trial:
+  memory estimate:  9.86 KiB
+  allocs estimate:  127
+  --------------
+  minimum time:     5.882 μs &#40;0.00&#37; GC&#41;
+  median time:      6.181 μs &#40;0.00&#37; GC&#41;
+  mean time:        7.355 μs &#40;10.07&#37; GC&#41;
+  maximum time:     685.475 μs &#40;98.99&#37; GC&#41;
+  --------------
+  samples:          10000
+  evals/sample:     5
+</pre>
+
+
+        <p>And that&#39;s not a win for the multi-core team... But we do not always expect a win in every situation.
+          Surely, the performance depends on the size of the matrix? So let&#39;s try a few:</p>
+
+
+        <pre class='hljl'>
+<span class='hljl-n'>n</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>u</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>λ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>μ</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>500</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+</span><span class='hljl-n'>serial</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>parallel</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>Ns</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>[],</span><span class='hljl-t'> </span><span class='hljl-p'>[],</span><span class='hljl-t'> </span><span class='hljl-p'>[</span><span class='hljl-ni'>1</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>3</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>10</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>50</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>100</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>150</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>200</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>300</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>500</span><span class='hljl-p'>]</span><span class='hljl-t'>
+</span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>N</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>Ns</span><span class='hljl-t'>
+    </span><span class='hljl-n'>A</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>SharedBandedBlockBandedMatrix</span><span class='hljl-p'>{</span><span class='hljl-n'>Float64</span><span class='hljl-p'>}(</span><span class='hljl-t'>
+            </span><span class='hljl-n'>undef</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>n</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>N</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>n</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>N</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>u</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>λ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>μ</span><span class='hljl-p'>))</span><span class='hljl-t'>
+    </span><span class='hljl-n'>bench</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nd'>@benchmark</span><span class='hljl-t'> </span><span class='hljl-nf'>simplefill!</span><span class='hljl-p'>(</span><span class='hljl-oB'>$</span><span class='hljl-n'>A</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-nf'>push!</span><span class='hljl-p'>(</span><span class='hljl-n'>parallel</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>bench</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>B</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>BandedBlockBandedMatrix</span><span class='hljl-p'>{</span><span class='hljl-n'>Float64</span><span class='hljl-p'>}(</span><span class='hljl-t'>
+            </span><span class='hljl-n'>undef</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>n</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>N</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>n</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>N</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>u</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>λ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>μ</span><span class='hljl-p'>))</span><span class='hljl-t'>
+    </span><span class='hljl-n'>bench</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nd'>@benchmark</span><span class='hljl-t'> </span><span class='hljl-nf'>simplefill!</span><span class='hljl-p'>(</span><span class='hljl-oB'>$</span><span class='hljl-n'>B</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-nf'>push!</span><span class='hljl-p'>(</span><span class='hljl-n'>serial</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>bench</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+
+        <p>To plot the results we will use <a href="https://github.com/queryverse/VegaLite.j">VegaLite.jl</a>, a Julia
+          wrapper around <a href="https://vega.github.io/vega-lite/">VegaLite</a>. So we will first create a dataset
+          with all the accumulated dated aggregated by the benchmarks and then feed it to a VegaLite schema. </p>
+
+
+        <pre class='hljl'>
+<span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>timing_data</span><span class='hljl-p'>(</span><span class='hljl-n'>Ns</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>serial</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>parallel</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>times</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>DataFrame</span><span class='hljl-p'>()</span><span class='hljl-t'>
+    </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>n</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>strial</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>ptrial</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-nf'>zip</span><span class='hljl-p'>(</span><span class='hljl-n'>Ns</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>serial</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>parallel</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>times</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>vcat</span><span class='hljl-p'>(</span><span class='hljl-t'>
+            </span><span class='hljl-n'>times</span><span class='hljl-p'>,</span><span class='hljl-t'>
+            </span><span class='hljl-nf'>DataFrame</span><span class='hljl-p'>(</span><span class='hljl-t'>
+                </span><span class='hljl-n'>n</span><span class='hljl-oB'>=</span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>n</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>strial</span><span class='hljl-oB'>.</span><span class='hljl-n'>times</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>ptrial</span><span class='hljl-oB'>.</span><span class='hljl-n'>times</span><span class='hljl-p'>)),</span><span class='hljl-t'>
+                </span><span class='hljl-n'>method</span><span class='hljl-oB'>=</span><span class='hljl-nf'>vcat</span><span class='hljl-p'>(</span><span class='hljl-t'>
+                    </span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-sc'>:serial</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>strial</span><span class='hljl-oB'>.</span><span class='hljl-n'>times</span><span class='hljl-p'>)),</span><span class='hljl-t'>
+                    </span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-sc'>:parallel</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>ptrial</span><span class='hljl-oB'>.</span><span class='hljl-n'>times</span><span class='hljl-p'>))</span><span class='hljl-t'>
+                </span><span class='hljl-p'>),</span><span class='hljl-t'>
+                </span><span class='hljl-n'>time</span><span class='hljl-oB'>=</span><span class='hljl-nf'>vcat</span><span class='hljl-p'>(</span><span class='hljl-n'>strial</span><span class='hljl-oB'>.</span><span class='hljl-n'>times</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>ptrial</span><span class='hljl-oB'>.</span><span class='hljl-n'>times</span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+    </span><span class='hljl-n'>times</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>plot_times</span><span class='hljl-p'>(</span><span class='hljl-n'>times</span><span class='hljl-oB'>::</span><span class='hljl-n'>DataFrame</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>times</span><span class='hljl-t'> </span><span class='hljl-oB'>|&gt;</span><span class='hljl-t'>
+        </span><span class='hljl-nd'>@vlplot</span><span class='hljl-p'>(</span><span class='hljl-t'>
+            </span><span class='hljl-n'>config</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>{</span><span class='hljl-t'>
+                </span><span class='hljl-n'>background</span><span class='hljl-oB'>=</span><span class='hljl-s'>&quot;#333&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'>
+                </span><span class='hljl-n'>title</span><span class='hljl-oB'>=</span><span class='hljl-p'>{</span><span class='hljl-n'>color</span><span class='hljl-oB'>=</span><span class='hljl-s'>&quot;#fff&quot;</span><span class='hljl-p'>},</span><span class='hljl-t'>
+                </span><span class='hljl-n'>style</span><span class='hljl-oB'>=</span><span class='hljl-p'>{</span><span class='hljl-t'>
+                    </span><span class='hljl-s'>&quot;guide-label&quot;</span><span class='hljl-oB'>=</span><span class='hljl-p'>{</span><span class='hljl-n'>fill</span><span class='hljl-oB'>=</span><span class='hljl-s'>&quot;#fff&quot;</span><span class='hljl-p'>},</span><span class='hljl-t'>
+                    </span><span class='hljl-s'>&quot;guide-title&quot;</span><span class='hljl-oB'>=</span><span class='hljl-p'>{</span><span class='hljl-n'>fill</span><span class='hljl-oB'>=</span><span class='hljl-s'>&quot;#fff&quot;</span><span class='hljl-p'>},</span><span class='hljl-t'>
+                </span><span class='hljl-p'>},</span><span class='hljl-t'>
+                </span><span class='hljl-n'>axis</span><span class='hljl-oB'>=</span><span class='hljl-p'>{</span><span class='hljl-t'>
+                    </span><span class='hljl-n'>domainColor</span><span class='hljl-oB'>=</span><span class='hljl-s'>&quot;#fff&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'>
+                    </span><span class='hljl-n'>gridColor</span><span class='hljl-oB'>=</span><span class='hljl-s'>&quot;#fff&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'>
+                    </span><span class='hljl-n'>tickColor</span><span class='hljl-oB'>=</span><span class='hljl-s'>&quot;#fff&quot;</span><span class='hljl-t'>
+                </span><span class='hljl-p'>}</span><span class='hljl-t'>
+            </span><span class='hljl-p'>},</span><span class='hljl-t'>
+            </span><span class='hljl-n'>x</span><span class='hljl-oB'>=</span><span class='hljl-p'>{</span><span class='hljl-sc'>:n</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>title</span><span class='hljl-oB'>=</span><span class='hljl-s'>&quot;Number of blocks&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>type</span><span class='hljl-oB'>=:</span><span class='hljl-n'>quantitative</span><span class='hljl-p'>},</span><span class='hljl-t'>
+            </span><span class='hljl-n'>color</span><span class='hljl-oB'>=</span><span class='hljl-p'>{</span><span class='hljl-sc'>:method</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>type</span><span class='hljl-oB'>=:</span><span class='hljl-n'>nominal</span><span class='hljl-p'>}</span><span class='hljl-t'>
+        </span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'>
+        </span><span class='hljl-nd'>@vlplot</span><span class='hljl-p'>(</span><span class='hljl-n'>mark</span><span class='hljl-oB'>=</span><span class='hljl-p'>{</span><span class='hljl-sc'>:line</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>point</span><span class='hljl-oB'>=:</span><span class='hljl-kc'>true</span><span class='hljl-p'>},</span><span class='hljl-t'> </span><span class='hljl-n'>y</span><span class='hljl-oB'>=</span><span class='hljl-s'>&quot;mean(time)&quot;</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'>
+        </span><span class='hljl-nd'>@vlplot</span><span class='hljl-p'>(</span><span class='hljl-t'>
+            </span><span class='hljl-n'>mark</span><span class='hljl-oB'>=</span><span class='hljl-p'>{</span><span class='hljl-sc'>:errorband</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>extent</span><span class='hljl-oB'>=:</span><span class='hljl-n'>stdev</span><span class='hljl-p'>},</span><span class='hljl-t'>
+            </span><span class='hljl-n'>y</span><span class='hljl-oB'>=</span><span class='hljl-p'>{</span><span class='hljl-t'>
+                </span><span class='hljl-sc'>:time</span><span class='hljl-p'>,</span><span class='hljl-t'>
+                </span><span class='hljl-n'>title</span><span class='hljl-oB'>=</span><span class='hljl-s'>&quot;mean time per fill(nanoseconds)&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'>
+                </span><span class='hljl-n'>type</span><span class='hljl-oB'>=:</span><span class='hljl-n'>quantitative</span><span class='hljl-t'>
+            </span><span class='hljl-p'>}</span><span class='hljl-t'>
+        </span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+</span><span class='hljl-nf'>plot_times</span><span class='hljl-p'>(</span><span class='hljl-n'>Ns</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>serial</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>parallel</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>plot_times</span><span class='hljl-oB'>∘</span><span class='hljl-n'>timing_data</span><span class='hljl-p'>)(</span><span class='hljl-n'>Ns</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>serial</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>parallel</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+</span><span class='hljl-nf'>plot_times</span><span class='hljl-p'>(</span><span class='hljl-n'>Ns</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>serial</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>parallel</span><span class='hljl-p'>)</span>
+</pre>
+
+
+        <img
+          src="data:image/png;base64,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" />
+
+        <p>The results are rather encouraging. The behavior of both serial and parallel versions are linear with the
+          number of non-zero blocks, and hence with the number of non-zero numbers entries in the matrix. This is what
+          we hoped for. And the parallel version is faster.</p>
+
+        <h2>Parallelizing matrix-vector operations</h2>
+        <p>Next we try to teach the shared block-banded matrix to do matrix-vector multiplications in parallel. First,
+          and following the previous schema, we create a function that will offload work to the different processes.</p>
+
+
+        <pre class='hljl'>
+<span class='hljl-nd'>@everywhere</span><span class='hljl-t'> </span><span class='hljl-k'>begin</span><span class='hljl-t'>
+    </span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>multiply!</span><span class='hljl-p'>(</span><span class='hljl-t'>
+        </span><span class='hljl-n'>out</span><span class='hljl-oB'>::</span><span class='hljl-nf'>SharedArray</span><span class='hljl-p'>{</span><span class='hljl-n'>T</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>},</span><span class='hljl-t'>
+        </span><span class='hljl-n'>A</span><span class='hljl-oB'>::</span><span class='hljl-nf'>SharedBandedBlockBandedMatrix</span><span class='hljl-p'>{</span><span class='hljl-n'>T</span><span class='hljl-p'>},</span><span class='hljl-t'>
+        </span><span class='hljl-n'>x</span><span class='hljl-oB'>::</span><span class='hljl-nf'>SharedArray</span><span class='hljl-p'>{</span><span class='hljl-n'>T</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>}</span><span class='hljl-t'>
+    </span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-n'>where</span><span class='hljl-t'> </span><span class='hljl-n'>T</span><span class='hljl-t'>
+        </span><span class='hljl-nd'>@sync</span><span class='hljl-t'> </span><span class='hljl-k'>begin</span><span class='hljl-t'>
+            </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>p</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>proc</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-nf'>enumerate</span><span class='hljl-p'>(</span><span class='hljl-nf'>procs</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>data</span><span class='hljl-oB'>.</span><span class='hljl-n'>blocks</span><span class='hljl-p'>))</span><span class='hljl-t'>
+                </span><span class='hljl-nd'>@async</span><span class='hljl-t'> </span><span class='hljl-nf'>remotecall_wait</span><span class='hljl-p'>(</span><span class='hljl-n'>multiply!</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>proc</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>out</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>x</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>p</span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-k'>end</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+        </span><span class='hljl-n'>A</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+
+        <p>Then, each process figures out which blocks are assigned to it. And it calls the multiplication operation for
+          each particular block of the input matrix with each particular segment of the input vector.</p>
+
+
+        <pre class='hljl'>
+<span class='hljl-nd'>@everywhere</span><span class='hljl-t'> </span><span class='hljl-k'>begin</span><span class='hljl-t'>
+    </span><span class='hljl-s'>&quot;&quot;&quot;Populates the blocks of A that are assigned to process p.&quot;&quot;&quot;</span><span class='hljl-t'>
+    </span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>multiply!</span><span class='hljl-p'>(</span><span class='hljl-t'>
+        </span><span class='hljl-n'>out</span><span class='hljl-oB'>::</span><span class='hljl-nf'>SharedArray</span><span class='hljl-p'>{</span><span class='hljl-n'>T</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>},</span><span class='hljl-t'>
+        </span><span class='hljl-n'>A</span><span class='hljl-oB'>::</span><span class='hljl-nf'>SharedBandedBlockBandedMatrix</span><span class='hljl-p'>{</span><span class='hljl-n'>T</span><span class='hljl-p'>},</span><span class='hljl-t'>
+        </span><span class='hljl-n'>x</span><span class='hljl-oB'>::</span><span class='hljl-nf'>SharedArray</span><span class='hljl-p'>{</span><span class='hljl-n'>T</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>},</span><span class='hljl-t'>
+        </span><span class='hljl-n'>p</span><span class='hljl-oB'>::</span><span class='hljl-n'>Integer</span><span class='hljl-t'>
+    </span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-n'>where</span><span class='hljl-t'> </span><span class='hljl-n'>T</span><span class='hljl-t'>
+        </span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>u</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>blockbandwidths</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>λ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>μ</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>subblockbandwidths</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>N</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>M</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>nblocks</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+        </span><span class='hljl-n'>n</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>sum</span><span class='hljl-p'>(</span><span class='hljl-t'>
+            </span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>u</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>nblocks</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>))</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'>  </span><span class='hljl-nf'>max</span><span class='hljl-p'>(</span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+            </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-nf'>nblocks</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>m</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-nf'>procs</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>data</span><span class='hljl-oB'>.</span><span class='hljl-n'>blocks</span><span class='hljl-p'>))</span><span class='hljl-t'>
+        </span><span class='hljl-n'>start</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>n</span><span class='hljl-t'> </span><span class='hljl-oB'>÷</span><span class='hljl-t'> </span><span class='hljl-n'>m</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>p</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-n'>n</span><span class='hljl-t'> </span><span class='hljl-oB'>%</span><span class='hljl-t'> </span><span class='hljl-n'>m</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>p</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>stop</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>n</span><span class='hljl-t'> </span><span class='hljl-oB'>÷</span><span class='hljl-t'> </span><span class='hljl-n'>m</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-n'>p</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-n'>n</span><span class='hljl-t'> </span><span class='hljl-oB'>%</span><span class='hljl-t'> </span><span class='hljl-n'>m</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>p</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>k</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'>
+        </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-nf'>nblocks</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>j</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-nf'>max</span><span class='hljl-p'>(</span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-oB'>:</span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>A</span><span class='hljl-oB'>.</span><span class='hljl-n'>u</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>nblocks</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>))</span><span class='hljl-t'>
+            </span><span class='hljl-k'>if</span><span class='hljl-t'> </span><span class='hljl-n'>k</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;=</span><span class='hljl-t'> </span><span class='hljl-n'>stop</span><span class='hljl-t'>
+                </span><span class='hljl-k'>break</span><span class='hljl-t'>
+            </span><span class='hljl-k'>elseif</span><span class='hljl-t'> </span><span class='hljl-n'>k</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;=</span><span class='hljl-t'> </span><span class='hljl-n'>start</span><span class='hljl-t'>
+                </span><span class='hljl-n'>Ablock</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>view</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>Block</span><span class='hljl-p'>(</span><span class='hljl-n'>i</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>j</span><span class='hljl-p'>))</span><span class='hljl-t'>
+                </span><span class='hljl-nf'>muladd!</span><span class='hljl-p'>(</span><span class='hljl-t'>
+                    </span><span class='hljl-nf'>one</span><span class='hljl-p'>(</span><span class='hljl-n'>T</span><span class='hljl-p'>),</span><span class='hljl-t'>
+                    </span><span class='hljl-n'>Ablock</span><span class='hljl-p'>,</span><span class='hljl-t'>
+                    </span><span class='hljl-nf'>view</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>Ablock</span><span class='hljl-oB'>.</span><span class='hljl-n'>indices</span><span class='hljl-p'>[</span><span class='hljl-ni'>2</span><span class='hljl-p'>]</span><span class='hljl-oB'>.</span><span class='hljl-n'>indices</span><span class='hljl-p'>),</span><span class='hljl-t'>
+                    </span><span class='hljl-nf'>zero</span><span class='hljl-p'>(</span><span class='hljl-n'>T</span><span class='hljl-p'>),</span><span class='hljl-t'>
+                    </span><span class='hljl-nf'>view</span><span class='hljl-p'>(</span><span class='hljl-n'>out</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>Ablock</span><span class='hljl-oB'>.</span><span class='hljl-n'>indices</span><span class='hljl-p'>[</span><span class='hljl-ni'>1</span><span class='hljl-p'>]</span><span class='hljl-oB'>.</span><span class='hljl-n'>indices</span><span class='hljl-p'>)</span><span class='hljl-t'>
+                </span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-k'>end</span><span class='hljl-t'>
+            </span><span class='hljl-n'>k</span><span class='hljl-t'> </span><span class='hljl-oB'>+=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+        </span><span class='hljl-n'>A</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+
+        <p>The clever part is not here. The clever part is the machinery that translates multiplying a view of a
+          block-banded matrix and a view of a vector into something that a <a
+            href="https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms">BLAS</a> function designed in the 70s
+          can consume, i.e. a mix of integers, floating points, and raw pointers to memory locations. That part is done
+          by <a href="https://github.com/JuliaMatrices/ArrayLayouts.jl">ArrayLayouts.jl</a>. Without going into to many
+          details, ArrayLayouts defines a <a
+            href="https://invenia.github.io/blog/2019/11/06/julialang-features-part-2/">trait</a>,
+          <code>MemoryLayout</code> which informs on how a specialized matrix is arranged in memory. With that
+          information, <code>ArrayLayout</code> can figure out whether it can call BLAS directly, or whether it first
+          needs to transform the inputs to objects with standard memory layout:</p>
+
+
+        <pre class='hljl'>
+<span class='hljl-nf'>MemoryLayout</span><span class='hljl-p'>(</span><span class='hljl-nf'>typeof</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-nf'>MemoryLayout</span><span class='hljl-p'>(</span><span class='hljl-nf'>typeof</span><span class='hljl-p'>([</span><span class='hljl-nfB'>1.0</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nfB'>2.0</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nfB'>4.0</span><span class='hljl-p'>]))</span>
+</pre>
+
+
+        <pre class="output">
+&#40;BlockBandedMatrices.BandedBlockBandedColumnMajor&#40;&#41;, ArrayLayouts.DenseColu
+mnMajor&#40;&#41;&#41;
+</pre>
+
+
+        <p>What sets Julia apart from other languages is the how relatively simple it is to extract common tropes
+          between diverse packages and leverage them into a single common grammar. The drawback is that we are seeing a
+          proliferation of small packages meant to define traits and methods for other packages downstream. It is not
+          clear to me what will happen as the ecosystem around Julia gets older, and as maintainers and codes come and
+          go. But leaving <code>left-pad</code> behind, lets get back to shared arrays and check whether parallelizing
+          the matrix-vector operation has had any success:</p>
+
+
+        <pre class='hljl'>
+<span class='hljl-n'>n</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>u</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>λ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>μ</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>500</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+</span><span class='hljl-n'>serial</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>parallel</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>Ns</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>[],</span><span class='hljl-t'> </span><span class='hljl-p'>[],</span><span class='hljl-t'> </span><span class='hljl-p'>[</span><span class='hljl-ni'>1</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>3</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>10</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>50</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>100</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>150</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>200</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>300</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>500</span><span class='hljl-p'>]</span><span class='hljl-t'>
+</span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>N</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>Ns</span><span class='hljl-t'>
+    </span><span class='hljl-n'>A</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>SharedBandedBlockBandedMatrix</span><span class='hljl-p'>{</span><span class='hljl-n'>Float64</span><span class='hljl-p'>}(</span><span class='hljl-t'>
+            </span><span class='hljl-n'>undef</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>n</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>N</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>n</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>N</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>u</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>λ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>μ</span><span class='hljl-p'>))</span><span class='hljl-t'>
+    </span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>SharedArray</span><span class='hljl-p'>{</span><span class='hljl-n'>Float64</span><span class='hljl-p'>}(</span><span class='hljl-nf'>rand</span><span class='hljl-p'>(</span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)))</span><span class='hljl-t'>
+    </span><span class='hljl-n'>out</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>SharedArray</span><span class='hljl-p'>{</span><span class='hljl-n'>Float64</span><span class='hljl-p'>}(</span><span class='hljl-nf'>rand</span><span class='hljl-p'>(</span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>)))</span><span class='hljl-t'>
+    </span><span class='hljl-nf'>simplefill!</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>bench</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nd'>@benchmark</span><span class='hljl-t'> </span><span class='hljl-nf'>multiply!</span><span class='hljl-p'>(</span><span class='hljl-oB'>$</span><span class='hljl-n'>out</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-oB'>$</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-oB'>$</span><span class='hljl-n'>x</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-nf'>push!</span><span class='hljl-p'>(</span><span class='hljl-n'>parallel</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>bench</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>B</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>BandedBlockBandedMatrix</span><span class='hljl-p'>{</span><span class='hljl-n'>Float64</span><span class='hljl-p'>}(</span><span class='hljl-t'>
+            </span><span class='hljl-n'>undef</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>n</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>N</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-nf'>repeat</span><span class='hljl-p'>([</span><span class='hljl-n'>n</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>N</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>u</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>λ</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>μ</span><span class='hljl-p'>))</span><span class='hljl-t'>
+    </span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>rand</span><span class='hljl-p'>(</span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>))</span><span class='hljl-t'>
+    </span><span class='hljl-n'>out</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>rand</span><span class='hljl-p'>(</span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>A</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-p'>))</span><span class='hljl-t'>
+    </span><span class='hljl-nf'>simplefill!</span><span class='hljl-p'>(</span><span class='hljl-n'>B</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>bench</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nd'>@benchmark</span><span class='hljl-t'> </span><span class='hljl-nf'>muladd!</span><span class='hljl-p'>(</span><span class='hljl-nfB'>1.0</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-oB'>$</span><span class='hljl-n'>B</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-oB'>$</span><span class='hljl-n'>x</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nfB'>0.0</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-oB'>$</span><span class='hljl-n'>out</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-nf'>push!</span><span class='hljl-p'>(</span><span class='hljl-n'>serial</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>bench</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+
+
+        <pre class='hljl'>
+<span class='hljl-nf'>plot_times</span><span class='hljl-p'>(</span><span class='hljl-n'>Ns</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>serial</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>parallel</span><span class='hljl-p'>)</span>
+</pre>
+
+
+        <img
+          src="data:image/png;base64,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" />
+
+        <p>Once again, the result is rather encouraging. We are getting some speedup. Exactly how much will depend on
+          your setup. In our case, we are using a Jupyter notebook running on the login node of the Imperial College
+          HPC, and results can be a bit noisy. </p>
+
+        <h1>Conclusion</h1>
+        <p>We&#39;ve shown how easy it can be to parallelize operations over an existing and somewhat complicated data
+          structure. Banded block-banded matrices are quite specialized. It would not be surprising if we could do
+          little to parallelize theirs operations without digging deep into their internals and modifying the orginal
+          package itself. But this is Julia. We have implemented a major new feature for banded block-banded matrices
+          <em>without touching the original code</em>. Even more interesting is that we have actually leveraged two
+          disparate packages to get the work done. We have combined <code>SharedArrays</code> for its ability to
+          share arrays across processes with <code>BlockBandedMatrices</code> for its specialized matrix type. Julia
+          does provide speed and nerdy street-creds, but most of all its design promotes code reuse and bottom-up,
+          unplanned collaboration beyond anything we&#39;ve seen in any major language.</p>
+        <p>We gratefully acknowledge sponsorship from <a
+            href="https://numfocus.org/blog/summer-2018-open-source-development-grants">NumFocus Open-Source Grant</a>
+          from Summer 2018. The grant allowed us to parametrize <a
+            href="https://github.com/JuliaMatrices/BlockBandedMatrices.jl">BlockBandedMatrices.jl</a> so that it can
+          accept different storage backends, with the goal of pushing the matrices onto the GPU.</p>
+
+
+
+        <HR />
+        <div class="footer">
+          <p>
+            Published from <a href="shared-memory-parallelization.ipynb">shared-memory-parallelization.ipynb</a> using
+            <a href="http://github.com/mpastell/Weave.jl">Weave.jl</a>
+            on 2019-12-11.
+            <p>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</BODY>
+
+</HTML>

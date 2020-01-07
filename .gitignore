@@ -1,5 +1,6 @@
 *
+docs/*
 !.gitignore
 !shared-memory-parallelization.ipynb
-
-
+!docs/
+!docs/shared-memory-parallelization.html
